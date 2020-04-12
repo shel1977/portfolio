@@ -1,0 +1,38 @@
+.works {
+    background-color: #607D8B;
+    display: flex;
+    justify-content: center;
+    padding: 150px 0px;
+
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.container h2 {
+    width: 150px;
+    text-align: center;
+    color: #CFD8DC;
+    border-bottom: 3px solid #CFD8DC;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.worksBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media screen and (max-width: 1271px){
+    .worksBlock {
+        justify-content: center;
+    }
+}

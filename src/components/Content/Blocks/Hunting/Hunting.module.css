@@ -1,0 +1,59 @@
+.hunting {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 150px 0px;
+
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    width: 200px;
+    text-align: center;
+    color: #607D8B;
+    border-bottom: 3px solid #607D8B;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.BodyTextHunting {
+    color: #607D8B;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.buttonHunting {
+    width: 120px;
+    height: 50px;
+    background-color:#607D8B;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.buttonHunting:hover {
+    background-color:#455A64;
+}
+.buttonHunting:active {
+    filter: saturate(150%);
+}

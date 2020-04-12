@@ -1,0 +1,55 @@
+.workBlock {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.headWorkBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgWorkBlock {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: #CFD8DC;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+.buttonWorkBlock {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    background-color: #FFFFFF;
+    color: #CFD8DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerWorkBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.workTitle {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #CFD8DC;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}

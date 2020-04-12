@@ -1,0 +1,36 @@
+
+.HeadMenu {
+    display: flex;
+    width: 300px;
+    align-items: center;
+
+}
+.languageChoise {
+    cursor: pointer;
+}
+
+.languageChoise,
+.languageChoise a {
+    font-size: 12px;
+    font-weight: 100;
+    color: #CFD8DC;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+}
+.activeRus span:nth-child(1) {
+    font-weight: 500;
+}
+
+.activeEng span:nth-child(3) {
+    font-weight: 500;
+}
+
+.contactHeader a img {
+    width: 20px;
+    height: 20px;
+    margin: 0 12px;
+}
+.contactHeader a:nth-child(1) {
+margin-left: 24px;
+}

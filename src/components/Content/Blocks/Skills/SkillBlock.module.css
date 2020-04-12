@@ -1,0 +1,42 @@
+.skillBlock {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.iconSkillBlock img {
+    height: 80px;
+    width: 80px;
+    margin: 20px 0;
+}
+
+.skillTitle {
+    color: #212121;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+@media screen and (max-width: 1271px){
+
+    .skillBlock {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .skillBlock {
+        width: 100%;
+    }
+}
