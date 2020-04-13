@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
+import photoShel from './../../../../assets/img/V_Sheludkov.jpg'
 
 function About(props) {
 
@@ -12,7 +13,7 @@ function About(props) {
                     <h1>{props.state.whoAmI}</h1>
                 </div>
                 <div className={styles.personPhoto}>
-                    <img src="" alt=""/>
+                    <img src={photoShel} alt=""/>
                 </div>
             </div>
         </div>
