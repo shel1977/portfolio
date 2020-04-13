@@ -17,6 +17,10 @@ const ContactForm = (props) => {
             .then(() => {
                 alert('message sends')
             })
+            .catch(error => {
+                debugger
+                console.log(error)
+            })
     };
 
     return (
@@ -24,7 +28,7 @@ const ContactForm = (props) => {
             <input ref={nameFormElement} className={styles.inputContactForm} placeholder={'name'}/>
             <input ref={mailFormElement} className={styles.inputContactForm} placeholder={'e-mail'}/>
             <textarea ref={textFormElement} className={styles.textareaContactForm} placeholder={'you message'}/>
-            <button onClick={sending} className={styles.buttonContactForm}>{props.contactMe.button}</button>
+            <div onClick={sending} className={styles.buttonContactForm}>{props.contactMe.button}</div>
         </form>
     )
 }
