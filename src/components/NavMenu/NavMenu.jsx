@@ -2,16 +2,25 @@ import React from 'react';
 import styles from './NavMenu.module.css';
 import burger from './../../assets/img/menuBurger.svg';
 import burgerCross from './../../assets/img/menuBurgerCross.svg';
-
 import * as Scroll from 'react-scroll';
-
+import {offMenuAC, switchMenuAC} from "../../menu-reducer";
 
 let Link = Scroll.Link;
 
 function NavMenu(props) {
-    let menuItems = props.navMenu.map(i => <div><Link to={i.link}
+
+    let switchMenu = () => {
+        props.dispatch(switchMenuAC())
+    };
+    let offMenu = () => {
+        props.dispatch(offMenuAC())
+    }
+
+    let menuItems = props.navMenu.map(i => <div key={i.id}><Link to={i.link}
                                                       activeClass={styles.navMenuSelected}
-                                                      spy={true} smooth={true}
+                                                      spy={true}
+                                                      smooth={true}
+                                                      onClick={offMenu}
                                                       duration={500}>{i.name}</Link></div>);
     let showMenu = () => {
        return props.isShowMenu ? styles.navMenuPop : styles.navMenuHidden;
@@ -20,16 +29,15 @@ function NavMenu(props) {
        return props.isShowMenu ? burgerCross : burger;
     };
 
-    //onPointerLeave={props.offMenu}
     return (
         <>
-            <div className={styles.navMenu} onMouseLeave={props.offMenu} >
+            <div className={styles.navMenu} /*onMouseLeave={props.offMenu}*/ >
                 <div className={showMenu()}>
                     {menuItems}
                 </div>
             </div>
             <div className={styles.burgerMenu}>
-                <a onClick={props.switchMenu}>
+                <a onClick={switchMenu}>
                     <img src={burgerChange()}/>
                 </a>
             </div>

@@ -10,7 +10,7 @@ function Footer(props) {
         <div className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.textName}>
-                    {props.state.footer.name}
+                    {props.contentLanguage.footer.name}
                 </div>
                 <div className={styles.socialNet}>
                     <a href="https://www.facebook.com/st.shel" target="_blank" rel="noopener" ><img src={facebook} className={styles.pictSocialNet}/></a>

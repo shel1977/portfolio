@@ -7,11 +7,12 @@ function Header(props) {
     return (
         <div className={styles.header}>
             <div className={styles.container}>
-                <HeaderMenu language={props.language}
-                            changeLanguage={props.changeLanguage}/>
-                <NavMenu navMenu={props.state.navMenu}
+                <HeaderMenu languageStatus={props.languageStatus}
+                            dispatch={props.dispatch}/>
+                <NavMenu navMenu={props.contentLanguage.navMenu}
+                         dispatch={props.dispatch}
+                         contentLanguage={props.contentLanguage}
                          isShowMenu={props.isShowMenu}
-                         switchMenu={props.switchMenu}
                          offMenu={props.offMenu}
                 />
             </div>

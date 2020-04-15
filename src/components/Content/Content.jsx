@@ -12,17 +12,17 @@ function Content(props) {
     return (
         <div className="content">
             <Element name='about'>
-                <About state={props.state.about}/>
+                <About state={props.contentLanguage.about}/>
             </Element>
             <Element name='skills'>
-                <Skills skills={props.state.skills}/>
+                <Skills skills={props.contentLanguage.skills}/>
             </Element>
             <Element name='works'>
-                <Works works={props.state.works}/>
+                <Works works={props.contentLanguage.works}/>
             </Element>
-            <Hunting hunting={props.state.hunting}/>
+            <Hunting hunting={props.contentLanguage.hunting}/>
             <Element name='contact'>
-                <Contacts contactMe={props.state.contactMe}/>
+                <Contacts contactMe={props.contentLanguage.contactMe}/>
             </Element>
         </div>
     );

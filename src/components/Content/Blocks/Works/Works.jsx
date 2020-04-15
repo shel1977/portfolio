@@ -4,7 +4,7 @@ import WorkBlock from "./WorkBlock";
 
 function Works(props) {
     let workBlocks =  props.works.worksBlocks.map(w => <WorkBlock
-    name = {w.name} descriptor = {w.description} image={w.image}/>)
+    name = {w.name} descriptor = {w.description} image={w.image} key={w.id}/>)
     return (
         <div className={styles.works}>
             <div className={styles.container}>
