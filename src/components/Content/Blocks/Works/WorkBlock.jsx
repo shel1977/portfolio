@@ -5,7 +5,7 @@ function WorkBlock(props) {
     return (
         <div className={styles.workBlock}>
             <div className={styles.headWorkBlock}>
-                <img src={props.image} className={styles.imgWorkBlock}/>
+                <img src={props.image} className={styles.imgWorkBlock} alt={props.name}/>
                 <div className={styles.buttonWorkBlock}>
                     <div>show</div>
                 </div>

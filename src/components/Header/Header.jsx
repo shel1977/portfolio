@@ -1,20 +1,14 @@
 import React from 'react';
 import styles from './Header.module.css';
-import NavMenu from "../NavMenu/NavMenu";
-import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import HeaderMenuContainer from "../HeaderMenu/HeaderMenuContainer";
+import NavMenuContainer from "../NavMenu/NavMenuContainer";
 
-function Header(props) {
+function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.container}>
-                <HeaderMenu languageStatus={props.languageStatus}
-                            dispatch={props.dispatch}/>
-                <NavMenu navMenu={props.contentLanguage.navMenu}
-                         dispatch={props.dispatch}
-                         contentLanguage={props.contentLanguage}
-                         isShowMenu={props.isShowMenu}
-                         offMenu={props.offMenu}
-                />
+                <HeaderMenuContainer />
+                <NavMenuContainer/>
             </div>
         </div>
     );

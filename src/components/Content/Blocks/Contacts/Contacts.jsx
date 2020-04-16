@@ -1,48 +1,40 @@
 import React from 'react';
 import styles from './Contacts.module.css';
-import axios from "axios";
-
+import {Field, reduxForm} from "redux-form";
 
 const ContactForm = (props) => {
-    let nameFormElement = React.createRef();
-    let mailFormElement = React.createRef();
-    let textFormElement = React.createRef();
-
-    let sending = () => {
-        axios.post('https://smtp-server-for-portfolio.herokuapp.com/sendMessage', {
-            name: nameFormElement.current.value,
-            email: mailFormElement.current.value,
-            message: textFormElement.current.value
-        })
-            .then(() => {
-                alert('message sends')
-            })
-            .catch(error => {
-                debugger
-                console.log(error)
-            })
-    };
 
     return (
-        <form className={styles.contactForm}>
-            <input ref={nameFormElement} className={styles.inputContactForm} placeholder={'name'}/>
-            <input ref={mailFormElement} className={styles.inputContactForm} placeholder={'e-mail'}/>
-            <textarea ref={textFormElement} className={styles.textareaContactForm} placeholder={'you message'}/>
-            <div onClick={sending} className={styles.buttonContactForm}>{props.contactMe.button}</div>
+        <form onSubmit={props.handleSubmit} className={styles.contactForm}>
+            <div>
+                <Field component={'input'} name={'name'} className={styles.inputContactForm} placeholder={'name'}/>
+            </div>
+            <div>
+                <Field component={'input'} name={'mail'} className={styles.inputContactForm} placeholder={'e-mail'}/>
+            </div>
+            <div>
+                <Field component={'textarea'} name={'text'} className={styles.textareaContactForm} placeholder={'you message'}/>
+            </div>
+            <div>
+                <button className={styles.buttonContactForm}>{props.contactMe.button}</button>
+            </div>
         </form>
     )
-}
+};
+
+const ContactReduxForm = reduxForm({form: 'contact'})(ContactForm);
 
 function Contacts(props) {
+    let sendOutForm = (onSubmit) => {
+        props.sendForm(onSubmit)
+    };
     return (
-
         <div className={styles.contacts}>
             <div className={styles.container}>
                 <h2>{props.contactMe.title}</h2>
-                <ContactForm contactMe={props.contactMe}/>
+                <ContactReduxForm onSubmit={sendOutForm} contactMe={props.contactMe}/>
             </div>
         </div>
-
     );
 }
 

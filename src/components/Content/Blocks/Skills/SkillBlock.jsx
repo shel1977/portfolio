@@ -8,7 +8,7 @@ function SkillBlock(props) {
     return (
         <div className={styles.skillBlock}>
             <div className={styles.iconSkillBlock}>
-                <img src={props.icon}/>
+                <img src={props.icon} alt={props.name}/>
             </div>
             <div>
                 <div className={styles.skillTitle}>{props.name}</div>

@@ -3,8 +3,8 @@ import About from "./Blocks/About/About";
 import Skills from "./Blocks/Skills/Skills";
 import Works from "./Blocks/Works/Works";
 import Hunting from "./Blocks/Hunting/Hunting";
-import Contacts from "./Blocks/Contacts/Contacts";
 import * as Scroll from 'react-scroll';
+import ContactContainer from "./Blocks/Contacts/ContactsContainer";
 
 let Element = Scroll.Element;
 
@@ -12,17 +12,17 @@ function Content(props) {
     return (
         <div className="content">
             <Element name='about'>
-                <About state={props.contentLanguage.about}/>
+                <About state={props.about}/>
             </Element>
             <Element name='skills'>
-                <Skills skills={props.contentLanguage.skills}/>
+                <Skills skills={props.skills}/>
             </Element>
             <Element name='works'>
-                <Works works={props.contentLanguage.works}/>
+                <Works works={props.works}/>
             </Element>
-            <Hunting hunting={props.contentLanguage.hunting}/>
+            <Hunting hunting={props.hunting}/>
             <Element name='contact'>
-                <Contacts contactMe={props.contentLanguage.contactMe}/>
+                <ContactContainer />
             </Element>
         </div>
     );

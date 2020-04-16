@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
 }
+.contactForm div{
+padding-left: 10px;
+}
 
 .container h2 {
     text-align: center;
@@ -31,21 +34,25 @@
 
 .inputContactForm {
     height: 50px;
-    padding-left: 10px;
 }
 
-.textareaContactForm {
-    min-height: 150px;
-    padding: 10px 0 0 10px;
-
-}
 .inputContactForm,
 .textareaContactForm {
+    padding: 0;
+    overflow: auto;
+    border: 0;
     margin-bottom: 10px;
     outline: #455A64 1px;
     font-family: 'Roboto Slab', serif;
     color: #607D8B;
     font-size: 12px;
+    width: 100%;
+    resize: none;
+    text-indent: 10px
+}
+.textareaContactForm {
+    min-height: 150px;
+    padding-top: 10px;
 }
 
 .buttonContactForm {
@@ -62,7 +69,6 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-
 }
 .buttonContactForm:hover {
     background-color: #455A64;

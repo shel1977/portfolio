@@ -1,25 +1,41 @@
+import {contentLanguage} from "./redux/language";
+
 const CHANGE_LANGUAGE = 'CHANGE-LANGUAGE';
 const SWITCH_MENU = 'SWITCH-MENU';
 const OFF_MENU = 'OFF-MENU';
 
+let initialState = {
+        languageStatus: true,
+        isShowMenu: false,
+        currentLanguage: contentLanguage.rus
+};
 
-const menuReducer = (state, action) => {
+const menuReducer = (state = initialState, action) => {
     switch (action.type) {
-        case CHANGE_LANGUAGE:
-            state.languageStatus
-                ? state.languageStatus = false
-                : state.languageStatus = true;
-            return state;
-        case SWITCH_MENU:
-            state.isShowMenu
-                ? state.isShowMenu = false
-                : state.isShowMenu = true;
-            return state;
-        case OFF_MENU:
-            if (state.isShowMenu === true){
-                state.isShowMenu = false
+        case CHANGE_LANGUAGE:{
+            let stateCopy = {...state};
+            if (state.languageStatus === true){
+                stateCopy.languageStatus = false;
+                stateCopy.currentLanguage = contentLanguage.eng
+            } else {
+                stateCopy.languageStatus = true;
+                stateCopy.currentLanguage = contentLanguage.rus
             }
-            return state;
+            return stateCopy;
+        }
+        case SWITCH_MENU: {
+            let stateCopy = {...state};
+            state.isShowMenu
+                ? stateCopy.isShowMenu = false
+                : stateCopy.isShowMenu = true;
+            return stateCopy;}
+        case OFF_MENU: {
+            let stateCopy = {...state};
+            if (state.isShowMenu === true){
+                stateCopy.isShowMenu = false
+            }
+            return stateCopy;
+        }
         default:
             return state;
     };

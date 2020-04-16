@@ -14,7 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-scroll": "^1.7.16",
-    "redux-form": "^8.3.3"
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
