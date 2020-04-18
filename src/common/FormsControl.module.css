@@ -1,12 +1,10 @@
 .formControl {
     padding: 0;
-
 }
 
 .error input,
-.error textarea
-{
-background-color: #ffa487
+.error textarea {
+    background-color: #ffa487
 }
 
 .error div {
