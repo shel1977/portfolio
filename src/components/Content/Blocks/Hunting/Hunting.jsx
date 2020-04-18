@@ -17,9 +17,6 @@ function Hunting(props) {
                       duration={500}>
                     {props.hunting.button}
                 </Link>
-{/*                <button className={styles.buttonHunting}>
-                    {props.hunting.button}
-                </button>*/}
             </div>
 
         </div>

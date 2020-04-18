@@ -82,7 +82,13 @@ export let contentLanguage = {
         },
         contactMe: {
             title: 'Свяжитесь со мной',
-            button: 'Отправить'
+            button: 'Отправить',
+            sending: 'ОТПРАВКА',
+            sendOk: 'СООБЩЕНИЕ ОТПРАВЛЕНО',
+            sendErr: 'ОШИБКА, ПОПРОБУЙТЕ ПОЗЖЕ',
+            placeholderName: 'Ваше имя',
+            placeholderMail: 'E-mail',
+            placeholderMessage: 'Сообщение'
         },
         footer: {
             name: 'Вячеслав Шелудков, React developer'
@@ -166,7 +172,13 @@ export let contentLanguage = {
         },
         contactMe: {
             title: 'Contact Me',
-            button: 'Send'
+            button: 'Send',
+            sending: 'SENDING',
+            sendOk: 'MESSAGE IS SENT',
+            sendErr: 'SOMETHING WRONG, TRY LATER',
+            placeholderName: 'You name',
+            placeholderMail: 'E-mail',
+            placeholderMessage: 'You message'
         },
         footer: {
             name: 'Vyacheslav (Shel) Sheludkov, React developer'

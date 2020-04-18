@@ -1,0 +1,21 @@
+.sendWindowWrapper {
+    position: fixed;
+    top: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    z-index: 101;
+    background-color: #212121;
+    opacity: 0.95;
+}
+.sendingReport {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #CFD8DC;
+    text-align: center;
+}
