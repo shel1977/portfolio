@@ -88,7 +88,9 @@ export let contentLanguage = {
             sendErr: 'ОШИБКА, ПОПРОБУЙТЕ ПОЗЖЕ',
             placeholderName: 'Ваше имя',
             placeholderMail: 'E-mail',
-            placeholderMessage: 'Сообщение'
+            placeholderMessage: 'Сообщение',
+            validateRequired: 'обязательное поле',
+            validateMail: 'неправильный E-mail'
         },
         footer: {
             name: 'Вячеслав Шелудков, React developer'
@@ -178,7 +180,9 @@ export let contentLanguage = {
             sendErr: 'SOMETHING WRONG, TRY LATER',
             placeholderName: 'You name',
             placeholderMail: 'E-mail',
-            placeholderMessage: 'You message'
+            placeholderMessage: 'You message',
+            validateRequired: 'required field',
+            validateMail: 'wrong E-mail'
         },
         footer: {
             name: 'Vyacheslav (Shel) Sheludkov, React developer'

@@ -1,0 +1,16 @@
+.formControl {
+    padding: 0;
+
+}
+
+.error input,
+.error textarea
+{
+background-color: #ffa487
+}
+
+.error div {
+    color: #212121;
+    font-size: 12px;
+    margin-bottom: 10px;
+}

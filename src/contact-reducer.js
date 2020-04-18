@@ -1,4 +1,6 @@
 import axios from "axios";
+import {reset} from 'redux-form';
+
 
 const SENDING_SWITCH = 'SENDING-SWITCH';
 const SEND_WINDOW_SWITCH = 'SEND-WINDOW-SWITCH';
@@ -24,7 +26,8 @@ const contactReducer = (state = initialState, action) => {
             return {...state, isSendOk: action.isSendOk};
         default:
             return state;
-    }
+    };
+
 };
 
 // Action creator
@@ -33,18 +36,22 @@ const switchSendWindowAC = (isShowWindow) => ({type: SEND_WINDOW_SWITCH, isShowW
 const sendErrorAC = (isSendError) => ({type: SEND_ERROR, isSendError});
 const sendOkAC = (isSendOk) => ({type: SEND_OK, isSendOk});
 
+
+// Thunk creator
+
 export const closeWindow = () => (dispatch) => {
     dispatch(switchSendWindowAC(false));
     dispatch(sendOkAC(false));
     dispatch(sendErrorAC(false));
 };
-// Thunk creator
+
 export const sendFormAC = (sendOutForm) => (dispatch) => {
     dispatch(switchSendWindowAC(true))
     dispatch(switchSendingAC(true))
     axios.post('https://smtp-server-for-portfolio.herokuapp.com/sendMessage',
         sendOutForm).then(res => {
         dispatch(switchSendingAC(false));
+        dispatch(reset('contact'));
         if (res.data === 'ok') {
             dispatch(sendOkAC(true))
         } else {

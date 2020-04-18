@@ -2,22 +2,35 @@ import React from 'react';
 import styles from './Contacts.module.css';
 import {Field, reduxForm} from "redux-form";
 import SendingWindow from "./SendingWindow";
+import {email, required} from "../../../../utils/validators";
+import {Input, Textarea} from "../../../../common/FormsControl";
 
 const ContactForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit} className={styles.contactForm}>
             <div>
-                <Field component={'input'} name={'name'}
-                       className={styles.inputContactForm} placeholder={props.contactMe.placeholderName}/>
+                <Field component={Input} name={'name'}
+                       className={styles.inputContactForm}
+                       validate={[required]}
+                       placeholder={props.contactMe.placeholderName}
+                       validateRequired={props.contactMe.validateRequired}
+                       validateMail={props.contactMe.validateMail}/>
             </div>
             <div>
-                <Field component={'input'} name={'email'}
-                       className={styles.inputContactForm} placeholder={props.contactMe.placeholderMail}/>
+                <Field component={Input} name={'email'}
+                       className={styles.inputContactForm}
+                       validate={[required, email]}
+                       placeholder={props.contactMe.placeholderMail}
+                       validateRequired={props.contactMe.validateRequired}
+                       validateMail={props.contactMe.validateMail}/>
             </div>
             <div>
-                <Field component={'textarea'} name={'message'}
+                <Field component={Textarea} name={'message'}
                        className={styles.textareaContactForm}
-                       placeholder={props.contactMe.placeholderMessage}/>
+                       validate={[required]}
+                       placeholder={props.contactMe.placeholderMessage}
+                       validateRequired={props.contactMe.validateRequired}
+                       validateMail={props.contactMe.validateMail}/>
             </div>
             <div>
                 <button className={styles.buttonContactForm}>{props.contactMe.button}</button>
