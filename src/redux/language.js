@@ -37,17 +37,17 @@ export let contentLanguage = {
                 {
                     id: 0,
                     name: 'React/Redux',
-                    description: 'По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов ',
+                    description: 'Redux-thunk, Router, Flux, Redux-form, Axios',
                     icon: reactIcon
                 }, {
                     id: 1,
                     name: 'Java Script',
-                    description: 'По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов ',
+                    description: 'Нативный JS,',
                     icon: jsIcon
                 }, {
                     id: 2,
                     name: 'HTML/CSS',
-                    description: 'По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов По русски написано куча слов ',
+                    description: 'Адаптивная верстка',
                     icon: htmlIcon
                 },
             ]
@@ -74,7 +74,7 @@ export let contentLanguage = {
         },
         hunting: {
             title: 'Ищу работу',
-            description: 'Junior Front-end разработчик. Проходил обучение в Geek-Brains на факультете "Вэб-разработка", "IT-Incubator" React, Redux, TypeScript и самостоятельно.\n' +
+            description: 'Junior Front-end разработчик. Проходил обучение в Geek-Brains на факультете "Веб-разработка", "IT-Incubator" React, Redux, TypeScript и самостоятельно.\n' +
                 'Остановил свой выбор на следующем стеке технологий: JavaScript, React/Redux, TypeScript, HTML, CSS. Умею верстать, знаком с CSS-препроцессорами.\n' +
                 'Готов к переезду',
             button: 'Связаться',
@@ -128,17 +128,17 @@ export let contentLanguage = {
                 {
                     id: 0,
                     name: 'React/Redux',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+                    description: 'Redux-thunk, Router, Flux, Redux-form, Axios',
                     icon: reactIcon
                 }, {
                     id: 1,
                     name: 'Java Script',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+                    description: 'Native JS',
                     icon: jsIcon
                 }, {
                     id: 2,
                     name: 'HTML/CSS',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+                    description: 'Adaptive layout',
                     icon: htmlIcon
                 },
             ]
@@ -165,7 +165,7 @@ export let contentLanguage = {
 
         },
         hunting: {
-            title: 'Hunting',
+            title: 'Looking for a Job',
             description: 'Junior Front-end developer. I Studied at Geek-Brains at the faculty of Web Development. ' +
                 'IT-Incubator, React, Redux, TypeScript and independently. ' +
                 'I chose the following technology stack: JavaScript, React / Redux, TypeScript, HTML, CSS. Ready to relocate.',
@@ -178,9 +178,9 @@ export let contentLanguage = {
             sending: 'SENDING',
             sendOk: 'MESSAGE IS SENT',
             sendErr: 'SOMETHING WRONG, TRY LATER',
-            placeholderName: 'You name',
+            placeholderName: 'Your name',
             placeholderMail: 'E-mail',
-            placeholderMessage: 'You message',
+            placeholderMessage: 'Your message',
             validateRequired: 'required field',
             validateMail: 'wrong E-mail'
         },

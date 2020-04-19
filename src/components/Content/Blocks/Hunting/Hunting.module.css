@@ -15,14 +15,13 @@
 }
 
 .container h2 {
-    width: 200px;
+    width: 220px;
     text-align: center;
     color: #607D8B;
     border-bottom: 3px solid #607D8B;
     padding-bottom: 5px;
     margin-bottom: 50px;
     text-transform: capitalize;
-    letter-spacing: 3px;
 }
 
 .BodyTextHunting {

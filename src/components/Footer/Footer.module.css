@@ -16,15 +16,13 @@
 }
 
 .textName {
-
+text-align: center;
 }
 
 .socialNet {
     width: 500px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
 }
 
 .pictSocialNet {
