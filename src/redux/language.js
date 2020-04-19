@@ -42,7 +42,7 @@ export let contentLanguage = {
                 }, {
                     id: 1,
                     name: 'Java Script',
-                    description: 'Нативный JS,',
+                    description: 'Нативный JS',
                     icon: jsIcon
                 }, {
                     id: 2,
